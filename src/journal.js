@@ -1,20 +1,26 @@
-export default function Journal(title, entry) {
+export default function Entry(title, body) {
     this.title = title;
-    this.entry = entry;
+    this.body = body;
 }
 
-Journal.prototype.wordCount = function () {
-    return "I can't answer that yet!";
+Entry.prototype.wordCount = function () {
+    return this.body.split(" ").length;
+};
+Entry.prototype.vowelCount = function () {
+    let vowels = 0;
+    this.body.split("").forEach(function (letter) {
+        if (/[aeiou]/gi.test(letter)) {
+            vowels++;
+        }
+    });
+    return vowels;
+};
 
+Entry.prototype.consCount = function () {
+    let matches = this.body.match(/[^aeiou\s]/gi);
+    return matches ? matches.length : 0;
 };
-Journal.prototype.vowelCount = function () {
-    return "I can't answer that yet!";
 
-};
-Journal.prototype.consCount = function () {
-    return "I can't answer that yet!";
-
-};
-Journal.prototype.getTeaser = function () {
-    return "I can't answer that yet!";
-};
+// Entry.prototype.getTeaser = function () {
+//     return "I can't answer that yet!";
+// };
