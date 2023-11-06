@@ -21,6 +21,12 @@ Entry.prototype.consCount = function () {
     return matches ? matches.length : 0;
 };
 
-// Entry.prototype.getTeaser = function () {
-//     return "I can't answer that yet!";
-// };
+Entry.prototype.getTeaser = function () {
+    const sentences = this.body.split(".");
+    if (sentences[0].split(" ").length > 8) {
+        const shortened = sentences[0].split(" ").slice(0, 8).join(" ");
+        return shortened + "...";
+    } else {
+        return sentences[0] + "...";
+    }
+};
