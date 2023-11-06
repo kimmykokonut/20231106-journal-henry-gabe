@@ -22,7 +22,7 @@ Entry.prototype.consCount = function () {
 };
 
 Entry.prototype.getTeaser = function () {
-    const sentences = this.body.split(".");
+    const sentences = this.body.split("."); //what if sentence ends with ? or !
     if (sentences[0].split(" ").length > 8) {
         const shortened = sentences[0].split(" ").slice(0, 8).join(" ");
         return shortened + "...";
