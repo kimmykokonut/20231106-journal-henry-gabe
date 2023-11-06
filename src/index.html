@@ -8,11 +8,17 @@
 <body>
     <h3>Journal Entry Submitter</h3>
     <form id="entry-form">
-        <label for="title">Title for journal entry: </label>
-        <input id="title" type="text">
-        <label for="journal-body">Journal entry: </label>
-        <input type="text" id="journal-body">
-        <!-- <textarea id="journal-body" type="text" name="journal-body" rows="10" cols="5"></textarea> -->
+        <div class="d-flex flex-column">
+            <div>
+                <label class="from-control-label" for="title">Title for journal entry: </label><br>
+                <input id="title" type="text">
+            </div>
+            <div>
+                <label for="journal-body">Journal entry: </label>
+                <textarea type="text" id="journal-body" cols="30" rows="10" > </textarea>
+            </div>
+        </div>
+        
         <button type="submit">Submit</button>
     </form>
     <div id="response"></div>

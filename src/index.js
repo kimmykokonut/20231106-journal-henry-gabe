@@ -32,7 +32,8 @@ form.addEventListener("submit", function(e) {
         const divWholeEntry = document.getElementById('showWhole');
         const h3Entry = document.createElement("h3");
         const pEntry = document.createElement("p");
-        divWholeEntry.setAttribute("class", "card w-25 mx-auto p-1")
+        divWholeEntry.innerHTML = "";
+        divWholeEntry.setAttribute("class", "card w-25 mx-auto p-1");
         h3Entry.append(titleInput);
         pEntry.append(journalInput);
         divWholeEntry.append(h3Entry, pEntry);

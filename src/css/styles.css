@@ -1,4 +1,10 @@
 body {
 
     background-color: rgb(64, 181, 142);
+    text-align: center;
+}
+
+#journal-body {
+    display: block;
+    margin:auto
 }
